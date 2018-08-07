@@ -1,6 +1,6 @@
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="bookmark" href="/favicon.ico"/>
-<title>@yield('page_title',setting('site.title'))</title>
+<title>@yield('page_title',setting('glb.title'))</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

@@ -4,19 +4,17 @@
     .bgimg-1 {
         background-position: center;
         background-size: cover;
-        background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+        background-image: url({{Voyager::image(setting('glb.big_image'))}});
         min-height: 100%;
     }
 
 </style>
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">首页置顶大图</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">宣传资料(如果可以的话，最好做成轮播图)</span><br>
-        <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+        <span class="w3-jumbo w3-hide-small">{{setting('glb.big_image_text1')}}</span><br>
+        <span class="w3-large">{{setting('glb.big_image_text2')}}</span>
         <p><a href="#home"
-              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
-                more and start today</a></p>
+              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">{{setting('glb.big_image_bt_text')}}</a></p>
     </div>
 
 </header>

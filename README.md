@@ -106,6 +106,7 @@ class MySettingsTableSeeder extends Seeder
 
 ```
 
+* 8.增加必要的 setting(MySettingsTableSeeder) 的数据设置.
 
 
 ***
@@ -118,11 +119,12 @@ class MySettingsTableSeeder extends Seeder
 * 5.开启虚拟机 `vagrant up`
 * 6.生成数据库的迁移: `php artisan migrate`
 * 7.生成 voyager 的测试数据,先把 laravel 和 voyager 的语言和区域都调成 zh ,这样生成的数据就会是本地化: `php artisan voyager:install --with-dummy`
-* 8.配置好 voyager 的 link: http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn
+* 8.配置好 voyager 的 link: [http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn)
 * 9.如果是在开发环境中配置好了各种的参数，记得把 数据库和 storage/app/public 中的内容导入到生产环境中.
 
 
 
 
 
-
+ {{--background-image: url( <?php  echo setting('site.title'); ?> );--}}
+background-image: url("https://www.w3schools.com/w3images/mac.jpg");
