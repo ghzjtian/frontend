@@ -5,7 +5,7 @@
         <a href="/" class="w3-bar-item w3-button w3-wide">{{ setting('site.title') }}</a>
         <!-- Right-sided navbar links , icons from https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
         <div class="w3-right w3-hide-small">
-            <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>首页</a>
+            <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>{{setting('site.home_title')}}</a>
             <a href="/products" class="w3-bar-item w3-button"><i class="fa fa-window-restore"></i> 我们的产品</a>
             <a href="/gallery" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> 图片欣赏</a>
             <a href="/news" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> 最新动态</a>

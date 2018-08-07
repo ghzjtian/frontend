@@ -2,6 +2,7 @@
 ## 2.各种 front-end 模板
 ## 3.开发的记录
 ## 4.项目 clone 后的搭建步骤
+
 ***
 ***
 ***
@@ -41,12 +42,71 @@
 
 ***
 
-## 3.开发的步骤
+## 3.开发的记录
 * 1.先用 [w3schools templates](https://www.w3schools.com/w3css/tryw3css_templates_startup.htm#work)做底层的网站显示.
 * 2.把各个功能模块分开,home ,about ,gallery ,news , contact us.  等等.
 * 3.把 css , jquery 等等分开到另外的文件.
 * 4.在 w3school 中寻找合适的 控件，导入前端，使得显示效果可以接受，如 轮播图.
-* 4.把 voyager 中的简单的数据先整理好,并导入前端里面.
+* 5.把 voyager 中的简单的数据先整理好,并导入前端里面.
+* 6.在 数据库的表 `settings` 中，可以新增其它的 Group.
+* 7.[生成自己的 Setting 数据的 Seeder](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#data_insert),这样就不用通过 WEB 去一个一个地输入，提高了效率和保证了
+测试端和服务端的完美一致.如:
+
+```angular2html
+<?php
+
+use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\Setting;
+
+class MySettingsTableSeeder extends Seeder
+{
+    /**
+     * Auto generated seed file.
+     */
+    public function run()
+    {
+        $setting = $this->findSetting('generate.title2');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => __('voyager::seeders.settings.site.title'),
+                'value' => __('voyager::seeders.settings.site.title'),
+                'details' => '',
+                'type' => 'text',
+                'order' => 1,
+                'group' => 'Generate',
+            ])->save();
+        }
+
+
+        $setting = $this->findSetting('generate.logo2');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => __('voyager::seeders.settings.site.logo'),
+                'value' => '',
+                'details' => '',
+                'type' => 'image',
+                'order' => 3,
+                'group' => 'Generate',
+            ])->save();
+        }
+    }
+
+    /**
+     * [setting description].
+     *
+     * @param [type] $key [description]
+     *
+     * @return [type] [description]
+     */
+    protected function findSetting($key)
+    {
+        return Setting::firstOrNew(['key' => $key]);
+    }
+}
+
+```
+
+
 
 ***
 
@@ -57,8 +117,9 @@
 * 4.配置 `.env` 中的数据库及路径等信息
 * 5.开启虚拟机 `vagrant up`
 * 6.生成数据库的迁移: `php artisan migrate`
-* 7.生成 voyager 的测试数据: `php artisan voyager:install --with-dummy`
+* 7.生成 voyager 的测试数据,先把 laravel 和 voyager 的语言和区域都调成 zh ,这样生成的数据就会是本地化: `php artisan voyager:install --with-dummy`
 * 8.配置好 voyager 的 link: http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn
+* 9.如果是在开发环境中配置好了各种的参数，记得把 数据库和 storage/app/public 中的内容导入到生产环境中.
 
 
 

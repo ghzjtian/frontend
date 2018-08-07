@@ -129,6 +129,7 @@ class SettingsTableSeeder extends Seeder
                 'group'        => 'Admin',
             ])->save();
         }
+
     }
 
     /**
