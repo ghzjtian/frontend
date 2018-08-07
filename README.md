@@ -1,7 +1,7 @@
 ## 1.Yoyager 项目
 ## 2.各种 front-end 模板
 ## 3.开发的记录
-
+## 4.项目 clone 后的搭建步骤
 ***
 ***
 ***
@@ -47,6 +47,18 @@
 * 3.把 css , jquery 等等分开到另外的文件.
 * 4.在 w3school 中寻找合适的 控件，导入前端，使得显示效果可以接受，如 轮播图.
 * 4.把 voyager 中的简单的数据先整理好,并导入前端里面.
+
+***
+
+## 4.项目 clone 后的搭建步骤
+* 1.安装 `composer` 的依赖 `composer install`.
+* 2.生成必要的 `Homestead` 文件(只是开发时需要). `php vendor/bin/homestead make`
+* 3.增加 `.env` 文件:`cp .env.example .env`，并生成一个 key : `php artisan key:generate`
+* 4.配置 `.env` 中的数据库及路径等信息
+* 5.开启虚拟机 `vagrant up`
+* 6.生成数据库的迁移: `php artisan migrate`
+* 7.生成 voyager 的测试数据: `php artisan voyager:install --with-dummy`
+* 8.配置好 voyager 的 link: http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn
 
 
 
