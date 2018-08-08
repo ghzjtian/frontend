@@ -21,7 +21,8 @@ class CreateProductsTable extends Migration
             $table->text('excerpt');//摘录
             $table->text('body');
             $table->string('image')->nullable();
-            $table->boolean('image_align_right');
+            $table->boolean('show_on_home');//是否在 home 页显示
+            $table->boolean('image_align_right');//是否图片在右边显示
             $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
             $table->timestamps();
         });

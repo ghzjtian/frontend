@@ -1,7 +1,8 @@
-<!-- Promo Section - "We know design" -->
+{{--在 产品页显示的 Products --}}
 {{-- style="margin-top: 100px" ,让列表跟顶部之间有间隔  --}}
 <div style="margin-top: 100px">
-    @foreach(App\Product::all() as $product)
+    <h3 class="w3-center">{{setting('glb.product_title')}}</h3>
+    @foreach( (App\Product::where('status','PUBLISHED') ->get()) as $product)
         <div class="w3-card-4 w3-margin" style="padding:18px 16px" id="products">
             <div class="w3-row-padding">
                 {{--图片是否靠右--}}
@@ -33,4 +34,5 @@
         </div>
 
     @endforeach
+{{--        @dd($product)--}}
 </div>

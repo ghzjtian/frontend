@@ -14,6 +14,7 @@ class SettingsTableHomeSeeder extends Seeder
      */
     public function run()
     {
+        //主页 相关
         $setting = $this->findSetting('glb.title');
         if (!$setting->exists) {
             $setting->fill([
@@ -183,6 +184,8 @@ class SettingsTableHomeSeeder extends Seeder
                 'group' => 'glb',
             ])->save();
         }
+
+
 
     }
 

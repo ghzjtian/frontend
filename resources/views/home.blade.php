@@ -16,8 +16,8 @@
 --}}
 
 {{--产品展示--}}
-@section('products')
-    @include('layouts.products')
+@section('products_home')
+    @include('layouts.products_home')
 @endsection
 
 {{--图片展示,从 gallery 中选几张酒的作品出来这里展示，点击进去就是 gallery 页}}

@@ -130,7 +130,7 @@ class MySettingsTableSeeder extends Seeder
     * 4.增加一个 Product 的 BREAD.并设置一些固定的输入显示,如:
     ```json
     {
-        "default": "radio1",
+        "default": "0",
         "options": {
             "0": "否",
             "1": "是"
@@ -148,8 +148,9 @@ class MySettingsTableSeeder extends Seeder
         }
     }
     ```
-   
-    
+   * 5.已经与前台对接好，现在可以后台操作正常显示.
+
+* 12.发现 voyager 的 settings 无法使用 radio 类型.
 
 ***
 

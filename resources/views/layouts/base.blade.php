@@ -13,8 +13,11 @@
 @section('nav_bar')
     @include('layouts.nav_bar')
 @show
-
+{{--主页置顶大图--}}
 @yield('header_img')
+{{--主页显示的产品--}}
+@yield('products_home')
+{{--详细页显示的产品--}}
 @yield('products')
 @yield('gallery')
 @yield('news')

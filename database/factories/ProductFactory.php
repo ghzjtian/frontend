@@ -9,6 +9,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'title' => $faker->word,
         'excerpt' => $faker->sentence,
         'body' => $faker->sentence,
+        'show_on_home'=>$faker->boolean,
         'image'=>$faker->imageUrl(),
         'image_align_right' => $faker->boolean,
         'status' => $faker->randomElement(['PUBLISHED', 'DRAFT', 'PENDING']),
