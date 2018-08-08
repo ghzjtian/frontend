@@ -23,7 +23,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '',
                 'type' => 'text',
                 'order' => 1,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
 
@@ -36,7 +36,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '',
                 'type' => 'image',
                 'order' => 2,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
 
@@ -48,7 +48,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 主页 的显示文字',
                 'type' => 'text',
                 'order' => 3,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.products');
@@ -59,7 +59,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 产品 的显示文字',
                 'type' => 'text',
                 'order' => 4,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.gallery');
@@ -70,7 +70,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 画廊 的显示文字',
                 'type' => 'text',
                 'order' => 5,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.news');
@@ -81,7 +81,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 动态 的显示文字',
                 'type' => 'text',
                 'order' => 6,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.about');
@@ -92,7 +92,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 关于我们 的显示文字',
                 'type' => 'text',
                 'order' => 7,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.contact');
@@ -103,7 +103,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '导航栏 上 关于我们 的显示文字',
                 'type' => 'text',
                 'order' => 8,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.close');
@@ -114,7 +114,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '如在小屏幕上显示时,导航栏上 关闭 的显示文字',
                 'type' => 'text',
                 'order' => 9,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
 
@@ -126,7 +126,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '站点的首页大图片',
                 'type' => 'image',
                 'order' => 10,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.big_image_text1');
@@ -137,7 +137,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '首页图片上的标题文字',
                 'type' => 'text',
                 'order' => 11,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.big_image_text2');
@@ -148,7 +148,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '首页图片上的说明文字',
                 'type' => 'text',
                 'order' => 12,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.big_image_bt_text');
@@ -159,7 +159,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '首页图片上的按钮说明文字',
                 'type' => 'text',
                 'order' => 13,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.big_image_bt_url');
@@ -170,7 +170,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '首页图片上的按钮 RUL',
                 'type' => 'text',
                 'order' => 14,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
         $setting = $this->findSetting('glb.button_more');
@@ -181,7 +181,7 @@ class SettingsTableHomeSeeder extends Seeder
                 'details' => '查看更多 按钮上的文字',
                 'type' => 'text',
                 'order' => 15,
-                'group' => 'glb',
+                'group' => 'GLB',
             ])->save();
         }
 
