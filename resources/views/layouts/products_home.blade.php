@@ -1,9 +1,9 @@
 {{--在 主页 显示的 Products --}}
 {{-- style="margin-top: 100px" ,让列表跟顶部之间有间隔  --}}
-@if(strcasecmp(setting('glb.product_home_show'),'yes')==0)
+@if(strcasecmp(setting('product.product_home_show'),'yes')==0)
 
     <div style="margin-top: 100px">
-        <h3 class="w3-center">{{setting('glb.product_title')}}</h3>
+        <h3 class="w3-center">{{setting('product.product_title')}}</h3>
         @foreach((App\Product::where('status','PUBLISHED')->get()) as $product)
             @if($product->show_on_home)
                 <div class="w3-card-4 w3-margin" style="padding:18px 16px" id="products">
