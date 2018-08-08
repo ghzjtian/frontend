@@ -7,7 +7,7 @@ use TCG\Voyager\Models\Setting;
  * Home 页的设置文字
  * Class SettingsHomeTableSeeder
  */
-class SettingsHomeTableSeeder extends Seeder
+class SettingsTableHomeSeeder extends Seeder
 {
     /**
      * Auto generated seed file.
@@ -169,6 +169,17 @@ class SettingsHomeTableSeeder extends Seeder
                 'details' => '首页图片上的按钮 RUL',
                 'type' => 'text',
                 'order' => 14,
+                'group' => 'glb',
+            ])->save();
+        }
+        $setting = $this->findSetting('glb.button_more');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '查看更多 按钮',
+                'value' =>'查看更多',
+                'details' => '查看更多 按钮上的文字',
+                'type' => 'text',
+                'order' => 15,
                 'group' => 'glb',
             ])->save();
         }

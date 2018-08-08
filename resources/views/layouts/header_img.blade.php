@@ -5,11 +5,7 @@
         background-position: center;
         background-size: cover;
         /*如果是默认的 settings url ，就显示默认的图片*/
-        @if(filter_var(setting('glb.big_image'),FILTER_VALIDATE_URL))
-         background-image: url({{setting('glb.big_image')}});
-        @else
-         background-image: url({{Voyager::image(setting('glb.big_image'))}});
-        @endif
+        background-image:url({{\App\Utils\UrlUtils::getImageURL(setting('glb.big_image'))}});
          min-height: 100%;
     }
 

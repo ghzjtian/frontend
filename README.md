@@ -23,6 +23,7 @@
     * [2. app launch 模板](https://www.w3schools.com/w3css/tryw3css_templates_app_launch.htm)
     * [3.MARKETING 模板](https://www.w3schools.com/w3css/tryw3css_templates_marketing.htm#)
     * [4.Marketing/Website template](https://www.w3schools.com/w3css/tryw3css_templates_website.htm#)
+    * [5.Trends 文章列表](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_trends_single)
 * 3.[Free CSS](https://www.free-css.com/)
     * [1.STANDOUT (这个不错)](https://www.free-css.com/free-css-templates/page228/standout)
     * [2.Bino](https://www.free-css.com/free-css-templates/page228/bino)
@@ -126,6 +127,28 @@ class MySettingsTableSeeder extends Seeder
 
     ```
     * [3.往数据库中添加随机的数据](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
+    * 4.增加一个 Product 的 BREAD.并设置一些固定的输入显示,如:
+    ```json
+    {
+        "default": "radio1",
+        "options": {
+            "0": "否",
+            "1": "是"
+        }
+    }
+    ```
+    
+    ```json
+    {
+        "default": "PUBLISHED",
+        "options": {
+            "PUBLISHED": "发布",
+            "DRAFT": "草稿",
+            "PENDING": "等待"
+        }
+    }
+    ```
+   
     
 
 ***
