@@ -177,7 +177,7 @@ class SettingsTableHomeSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '查看更多 按钮',
-                'value' =>'查看更多',
+                'value' =>'查看详情',
                 'details' => '查看更多 按钮上的文字',
                 'type' => 'text',
                 'order' => 15,

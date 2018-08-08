@@ -152,6 +152,15 @@ class MySettingsTableSeeder extends Seeder
 
 * 12.发现 voyager 的 settings 无法使用 radio 类型.
 
+* 13.开发 Product 的 Detail 页.
+    * [1.生成一个资源控制器](https://laravel-china.org/docs/laravel/5.6/controllers/1366#resource-controllers)
+        * 1.`php artisan make:controller ProductController --resource`
+    * 2.在 web.php 中配置资源路由. `Route::resource('products','ProductController');`
+    * 3.发现在  voyager 的 BREAD 中， `MarkDown` 编辑器不会有效果, `Rich Text Box` 在实际 `frontend` 中显示没有效果.
+        
+        
+        
+        
 ***
 
 ## 4.项目 clone 后的搭建步骤

@@ -10,7 +10,7 @@
                     <div class="w3-col m6">
                         <h3>{{ $product->title }}</h3>
                         <p>{{$product->excerpt}}</p>
-                        <p><a href="#products" class="w3-button w3-black"><i
+                        <p><a href={{(url()->current())."/".$product->id}} class="w3-button w3-black"><i
                                         class="fa fa-th"> </i> {{setting('glb.button_more')}}</a></p>
                     </div>
                     <div class="w3-col m6">
@@ -25,7 +25,7 @@
                     <div class="w3-col m6">
                         <h3>{{ $product->title }}</h3>
                         <p>{{$product->excerpt}}</p>
-                        <p><a href="#products" class="w3-button w3-black"><i
+                        <p><a href={{(url()->current())."/".$product->id}} class="w3-button w3-black"><i
                                         class="fa fa-th"> </i> {{setting('glb.button_more')}}</a></p>
                     </div>
 

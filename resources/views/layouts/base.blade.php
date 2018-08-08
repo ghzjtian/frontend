@@ -17,8 +17,12 @@
 @yield('header_img')
 {{--主页显示的产品--}}
 @yield('products_home')
-{{--详细页显示的产品--}}
+{{--产品页显示的产品--}}
 @yield('products')
+{{--产品的详细页面--}}
+@yield('products_detail')
+
+
 @yield('gallery')
 @yield('news')
 @yield('about')

@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('products', function () {
-    return view('products');
-});
+//Route::get('products', function () {
+//    return view('products');
+//});
 Route::get('gallery', function () {
     return view('gallery');
 });
@@ -30,6 +30,7 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+Route::resource('products','ProductController');
 
 //Voyager 后台管理 代码
 Route::group(['prefix' => 'admin'], function () {
