@@ -109,6 +109,24 @@ class MySettingsTableSeeder extends Seeder
 * 8.增加必要的 setting(MySettingsTableSeeder) 的数据设置.
 * 9.发现在 homestead 的开发环境中，[view 的 cache 无法被清除.](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
 * 10.Setting (如:SettingsHomeTableSeeder)中的 Group 不能被设置为 中文.
+* 11.生成 Product 的数据库，并往数据库中添加数据，最后让数据跟 前台 对接.
+    * 1.生成 Model: `php artisan make:model Product`
+    * 2.生成迁移表: `php artisan make:migration create_products_table`,往表中添加数据并运行迁移`php artisan migrate`:
+    ```angular2html
+      $table->increments('id');
+                $table->integer('author_id');
+                $table->integer('category_id')->nullable();
+                $table->string('title');
+                $table->text('excerpt');//摘录
+                $table->text('body');
+                $table->string('image')->nullable();
+                $table->boolean('image_align_right');
+                $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
+                $table->timestamps();
+
+    ```
+    * [3.往数据库中添加随机的数据](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
+    
 
 ***
 
