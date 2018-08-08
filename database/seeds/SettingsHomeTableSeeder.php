@@ -121,7 +121,7 @@ class SettingsHomeTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '首页大图片(建议 1200x800)',
-                'value' => '',
+                'value' => 'https://www.w3schools.com/w3images/mac.jpg',
                 'details' => '站点的首页大图片',
                 'type' => 'image',
                 'order' => 10,
@@ -132,7 +132,7 @@ class SettingsHomeTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '首页图片上的标题文字',
-                'value' =>'专注环保',
+                'value' =>'格力博',
                 'details' => '首页图片上的标题文字',
                 'type' => 'text',
                 'order' => 11,
@@ -143,7 +143,7 @@ class SettingsHomeTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '首页图片上的说明文字',
-                'value' =>'环保是人类发展之本',
+                'value' =>'让生活更美好',
                 'details' => '首页图片上的说明文字',
                 'type' => 'text',
                 'order' => 12,
@@ -154,10 +154,21 @@ class SettingsHomeTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '首页图片上的按钮文字',
-                'value' =>'了解更多',
+                'value' =>'访问常州总公司网站',
                 'details' => '首页图片上的按钮说明文字',
                 'type' => 'text',
                 'order' => 13,
+                'group' => 'glb',
+            ])->save();
+        }
+        $setting = $this->findSetting('glb.big_image_bt_url');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '首页图片上的按钮 RUL',
+                'value' =>'http://www.greenworkstools.cn/',
+                'details' => '首页图片上的按钮 RUL',
+                'type' => 'text',
+                'order' => 14,
                 'group' => 'glb',
             ])->save();
         }
