@@ -15,9 +15,8 @@
 @show
 {{--主页置顶大图--}}
 @yield('header_img')
-{{--主页显示的产品--}}
-@yield('products_home')
-{{--产品页显示的产品--}}
+
+{{--显示 产品--}}
 @yield('products')
 {{--产品的详细页面--}}
 @yield('products_detail')
