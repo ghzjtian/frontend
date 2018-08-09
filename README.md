@@ -164,7 +164,7 @@ class MySettingsTableSeeder extends Seeder
         * [1.best way to render markdown in views](https://laracasts.com/discuss/channels/laravel/best-way-to-render-markdown-in-views)
         
         
-        
+* 14.Contact 页的 email 发送功能(还没完成).   
         
         
         

@@ -1,21 +1,21 @@
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-    <h3 class="w3-center">联系我们</h3>
-    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <h3 class="w3-center">{{setting('contact.title')}}</h3>
+    <p class="w3-center w3-large">{{setting('about.detail')}}</p>
     <div class="w3-row-padding" style="margin-top:64px">
         <div class="w3-half">
-            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> {{setting('about.location')}}</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> {{setting('about.phone')}}</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> {{setting('about.email')}}</p>
             <br>
-            <form action="/action_page.php" target="_blank">
-                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+            <form action="#" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder={{setting('about.input_name')}} required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder={{setting('about.input_email')}} required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder={{setting('about.input_subject')}} required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder={{setting('about.input_message')}} required name="Message"></p>
                 <p>
                     <button class="w3-button w3-black" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        <i class="fa fa-paper-plane"></i> {{setting('about.input_send')}}
                     </button>
                 </p>
             </form>
