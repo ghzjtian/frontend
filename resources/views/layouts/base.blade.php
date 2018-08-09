@@ -23,7 +23,11 @@
 
 
 @yield('gallery')
+{{-- 显示 动态--}}
 @yield('news')
+{{--动态 详情页面--}}
+@yield('news_detail')
+
 @yield('about')
 @yield('contact')
 

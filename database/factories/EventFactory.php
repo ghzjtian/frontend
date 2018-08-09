@@ -10,7 +10,7 @@ $factory->define(App\Event::class, function (Faker $faker) {
         'excerpt' => $faker->sentence,
         'body' => $faker->sentence,
         'show_on_home'=>$faker->boolean,
-        'image'=>$faker->imageUrl(),
+        'image'=>'https://www.w3schools.com/w3css/img_woods.jpg',
         'status' => $faker->randomElement(['PUBLISHED', 'DRAFT', 'PENDING']),
     ];
 });

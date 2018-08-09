@@ -30,7 +30,7 @@
 {{--最近的新闻事件,酒品知识,从新闻中摘取几个出来，放在这里，然后点击就进去相关的 news 页的详细--}}
 {{--普通的 section 信息--}}
 @section('news')
-    @include('layouts.news')
+    @include('layouts.news',['isHomePage'=>true])
 @endsection
 
 {{--关于我们--}}

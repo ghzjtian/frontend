@@ -7,7 +7,8 @@
         @foreach( (App\Product::where('status','PUBLISHED') ->get()) as $product)
             @if(!$isHomePage||$product->show_on_home)
                 <div class="w3-card-4 w3-margin" style="padding:18px 16px" id="products">
-                    <div class="w3-row-padding"  onclick="javascript:location.href='{{env('APP_URL')."/products/".$product->id}}'">
+                    <div class="w3-row-padding"
+                         onclick="javascript:location.href='{{env('APP_URL')."/products/".$product->id}}'">
                         {{--图片是否靠右--}}
                         @if($product->image_align_right)
                             <div class="w3-col m6">
@@ -49,14 +50,14 @@
     </div>
 
     {{--<script>--}}
-        {{--// Modal Image Gallery--}}
-        {{--function onClick(element) {--}}
-            {{--// document.getElementById("img01").src = element.src;--}}
-            {{--// document.getElementById("modal01").style.display = "block";--}}
-            {{--// var captionText = document.getElementById("caption");--}}
-            {{--// captionText.innerHTML = element.alt;--}}
+    {{--// Modal Image Gallery--}}
+    {{--function onClick(element) {--}}
+    {{--// document.getElementById("img01").src = element.src;--}}
+    {{--// document.getElementById("modal01").style.display = "block";--}}
+    {{--// var captionText = document.getElementById("caption");--}}
+    {{--// captionText.innerHTML = element.alt;--}}
 
-        {{--}--}}
+    {{--}--}}
     {{--</script>--}}
 
 @endif

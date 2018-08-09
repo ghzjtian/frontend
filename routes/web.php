@@ -20,9 +20,9 @@ Route::get('/', function () {
 //Route::get('gallery', function () {
 //    return view('gallery');
 //});
-Route::get('news', function () {
-    return view('news');
-});
+//Route::get('news', function () {
+//    return view('news');
+//});
 Route::get('about', function () {
     return view('about');
 });
@@ -32,6 +32,7 @@ Route::get('contact', function () {
 
 Route::resource('products','ProductController');
 Route::resource('galleries','PictureController');
+Route::resource('events','EventController');
 
 //Voyager 后台管理 代码
 Route::group(['prefix' => 'admin'], function () {
