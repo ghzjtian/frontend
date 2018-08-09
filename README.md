@@ -162,6 +162,12 @@ class MySettingsTableSeeder extends Seeder
             * 1.在网站的 BREAD 中把 `create_at` 从 edit 视图中取消勾选.
     * 4.目前 laravel 官方没有支持 markdown 的显示，所以还是建议用 RichTexBox 去编辑
         * [1.best way to render markdown in views](https://laracasts.com/discuss/channels/laravel/best-way-to-render-markdown-in-views)
+        
+        
+        
+        
+        
+        
 ***
 
 ## 4.项目 clone 后的搭建步骤
