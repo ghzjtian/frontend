@@ -157,10 +157,11 @@ class MySettingsTableSeeder extends Seeder
         * 1.`php artisan make:controller ProductController --resource`
     * 2.在 web.php 中配置资源路由. `Route::resource('products','ProductController');`
     * 3.发现在  voyager 的 BREAD 中， `MarkDown` 编辑器不会有效果, `Rich Text Box` 在实际 `frontend` 中显示没有效果.
-        
-        
-        
-        
+        * [1.Rich Text Box 的 html代码 正常显示](https://github.com/the-control-group/voyager/issues/1081)
+        * [2.MarkDown 编辑器的正常显示](https://github.com/the-control-group/voyager/issues/1847)
+            * 1.在网站的 BREAD 中把 `create_at` 从 edit 视图中取消勾选.
+    * 4.目前 laravel 官方没有支持 markdown 的显示，所以还是建议用 RichTexBox 去编辑
+        * [1.best way to render markdown in views](https://laracasts.com/discuss/channels/laravel/best-way-to-render-markdown-in-views)
 ***
 
 ## 4.项目 clone 后的搭建步骤
