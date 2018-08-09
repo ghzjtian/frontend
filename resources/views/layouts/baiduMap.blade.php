@@ -19,6 +19,8 @@
 <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
 </body>
 <script type="text/javascript">
+
+
     //创建和初始化地图函数：
     function initMap(){
         createMap();//创建地图
@@ -29,8 +31,11 @@
 
     //创建地图函数：
     function createMap(){
+        var longitude = {{$longitude}};
+        var latitude = {{$latitude}};
+
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(113.405313,23.101336);//定义一个中心点坐标
+        var point = new BMap.Point(longitude,latitude);//定义一个中心点坐标
         map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
@@ -57,7 +62,14 @@
     }
 
     //标注点数组
-    var markerArr = [{title:"格力博",content:"常州格力博有限公司",point:"113.405358|23.102367",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var longitude = {{$longitude}};
+    var latitude = {{$latitude}};
+    var longAndLat = longitude+"|"+latitude;
+    //PHP 字符串转 javascript String: https://stackoverflow.com/questions/168214/pass-a-php-string-to-a-javascript-variable-and-escape-newlines
+    var map_title = <?php echo json_encode($map_title); ?>;
+    var map_content = <?php echo json_encode($map_content); ?>;
+
+    var markerArr = [{title:map_title,content:map_content,point:longAndLat,isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
     ];
     //创建marker
     function addMarker(){

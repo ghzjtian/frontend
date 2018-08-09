@@ -25,7 +25,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.location');
+        $setting = $this->findSetting('contact.location');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '联系地址',
@@ -36,7 +36,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.phone');
+        $setting = $this->findSetting('contact.phone');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '联系电话',
@@ -47,7 +47,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.email');
+        $setting = $this->findSetting('contact.email');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '电子邮件',
@@ -58,7 +58,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.input_name');
+        $setting = $this->findSetting('contact.input_name');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '反馈框中名字的显示内容',
@@ -69,7 +69,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.input_email');
+        $setting = $this->findSetting('contact.input_email');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '反馈框中 email 的显示内容',
@@ -80,7 +80,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.input_subject');
+        $setting = $this->findSetting('contact.input_subject');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '反馈框中 主题 的显示内容',
@@ -91,7 +91,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.input_message');
+        $setting = $this->findSetting('contact.input_message');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '反馈框中 信息 的显示内容',
@@ -102,7 +102,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.input_send');
+        $setting = $this->findSetting('contact.input_send');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '反馈框中 发送 的显示内容',
@@ -113,7 +113,7 @@ class SettingsTableContactSeeder extends Seeder
                 'group' => 'Contact',
             ])->save();
         }
-        $setting = $this->findSetting('about.detail');
+        $setting = $this->findSetting('contact.detail');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '关于我们 描述信息',
@@ -121,6 +121,50 @@ class SettingsTableContactSeeder extends Seeder
                 'details' => '关于我们 描述信息',
                 'type' => 'text',
                 'order' => 10,
+                'group' => 'Contact',
+            ])->save();
+        }
+        $setting = $this->findSetting('contact.longitude');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '百度地图的经度',
+                'value' => '113.405358',
+                'details' => '地图的经度',
+                'type' => 'text',
+                'order' => 11,
+                'group' => 'Contact',
+            ])->save();
+        }
+        $setting = $this->findSetting('contact.latitude');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '百度地图的纬度',
+                'value' => '23.102367',
+                'details' => '地图的纬度',
+                'type' => 'text',
+                'order' => 12,
+                'group' => 'Contact',
+            ])->save();
+        }
+        $setting = $this->findSetting('contact.map_title');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '地图弹框的标题',
+                'value' => '格力博',
+                'details' => '地图弹框的标题',
+                'type' => 'text',
+                'order' => 13,
+                'group' => 'Contact',
+            ])->save();
+        }
+        $setting = $this->findSetting('contact.map_content');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '地图弹框的内容',
+                'value' => '常州格力博有限公司广州分部',
+                'details' => '地图的弹框的内容',
+                'type' => 'text',
+                'order' => 14,
                 'group' => 'Contact',
             ])->save();
         }
