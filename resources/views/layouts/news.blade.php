@@ -1,75 +1,30 @@
 
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="news">
-    <h3 class="w3-center">相关的这个行业或公司的新闻</h3>
-    <p class="w3-center w3-large">The ones who runs this company</p>
-    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
-                <div class="w3-container">
-                    <h3>John Doe</h3>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                        elementum.</p>
-                    <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-reorder"></i> 查看更多</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane" style="width:100%">
-                <div class="w3-container">
-                    <h3>Anja Doe</h3>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                        elementum.</p>
-                    <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-reorder"></i> 查看更多</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%">
-                <div class="w3-container">
-                    <h3>Mike Ross</h3>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                        elementum.</p>
-                    <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-reorder"></i> 查看更多</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
-                <div class="w3-container">
-                    <h3>Dan Star</h3>
-                    
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                        elementum.</p>
-                    <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-reorder"></i> 查看更多</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
-                <div class="w3-container">
-                    <h3>Dan Star</h3>
+    <h3 class="w3-center">{{setting('news.news_title')}}</h3>
 
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                        elementum.</p>
-                    <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-reorder"></i> 查看更多</button>
-                    </p>
-                </div>
-            </div>
+    <div class="w3-card-4 w3-margin">
+        <img src="https://www.w3schools.com/w3css/img_woods.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+            <h3><b>TITLE HEADING</b></h3>
+            <h5>Title description
+                <span class="w3-opacity">April 7, 2014</span></h5>
+        </div>
+        <div class="w3-container">
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. </p>
         </div>
     </div>
+
+    <div class="w3-card-4 w3-margin">
+        <img src="https://www.w3schools.com/w3css/img_bridge.jpg" alt="Norway" style="width:100%">
+        <div class="w3-container">
+            <h3><b>BLOG ENTRY</b></h3>
+            <h5>Title description
+                <span class="w3-opacity">April 2, 2014</span></h5>
+        </div>
+        <div class="w3-container">
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum.</p>
+        </div>
+    </div>
+
 </div>
