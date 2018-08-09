@@ -6,18 +6,22 @@
             <p>{!! setting('about.content') !!}</p>
         </div>
         <div class="w3-col m6">
-            <p class="w3-wide"><i class="fa fa-mobile-phone w3-margin-right"></i>APP 开发</p>
-            <div class="w3-grey">
-                <div class="w3-container w3-dark-grey w3-center" style="width:10%">190%</div>
-            </div>
-            <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-            <div class="w3-grey">
-                <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-            </div>
-            <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-            <div class="w3-grey">
-                <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-            </div>
+            @foreach( (App\About::where('show','1') ->get()) as $ability)
+                <p class="w3-wide"><i class="{{$ability->icon}} w3-margin-right"></i>{{$ability->title}}</p>
+                <div class="w3-grey">
+                    <?php
+                    $MyAbility = $ability->ability;
+                    if ($MyAbility > 100) {
+                        $MyAbility = 100;
+                    } elseif ($MyAbility < 0) {
+                        $MyAbility = 0;
+                    }
+                    ?>
+                    <div class="w3-container w3-dark-grey w3-center" style="width:{{$MyAbility}}%">{{$MyAbility}}%</div>
+                </div>
+            @endforeach
+
+
         </div>
     </div>
 </div>
