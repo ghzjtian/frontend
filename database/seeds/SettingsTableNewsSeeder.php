@@ -17,7 +17,7 @@ class SettingsTableNewsSeeder extends Seeder
      */
     public function run()
     {
-        //Gallery 相关
+        //News 相关
         $setting = $this->findSetting('news.news_home_show');
         if (!$setting->exists) {
             $setting->fill([
