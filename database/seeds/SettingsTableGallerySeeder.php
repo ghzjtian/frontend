@@ -18,7 +18,7 @@ class SettingsTableGallerySeeder extends Seeder
     public function run()
     {
         //Gallery 相关
-        $setting = $this->findSetting('gallery.product_home_show');
+        $setting = $this->findSetting('gallery.gallery_home_show');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '画廊 在主页上显示(请填 yes 或 no)',
@@ -30,7 +30,7 @@ class SettingsTableGallerySeeder extends Seeder
             ])->save();
         }
 
-        $setting = $this->findSetting('gallery.product_title');
+        $setting = $this->findSetting('gallery.gallery_title');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '画廊的总标题',

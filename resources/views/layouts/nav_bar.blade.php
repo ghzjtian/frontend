@@ -7,7 +7,7 @@
         <div class="w3-right w3-hide-small">
             <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>{{setting('glb.home')}}</a>
             <a href="/products" class="w3-bar-item w3-button"><i class="fa fa-window-restore"></i> {{setting('glb.products')}}</a>
-            <a href="/gallery" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> {{setting('glb.gallery')}}</a>
+            <a href="/galleries" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> {{setting('glb.gallery')}}</a>
             <a href="/news" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> {{setting('glb.news')}}</a>
             <a href="/about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> {{setting('glb.about')}}</a>
             <a href="/contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> {{setting('glb.contact')}}</a>
@@ -28,7 +28,7 @@
 
     <a href="/" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-home"></i>{{setting('glb.home')}}</a>
     <a href="/products" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-window-restore"></i> {{setting('glb.products')}}</a>
-    <a href="/gallery" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> {{setting('glb.gallery')}}</a>
+    <a href="/galleries" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> {{setting('glb.gallery')}}</a>
     <a href="/news" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> {{setting('glb.news')}}</a>
     <a href="/about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i> {{setting('glb.about')}}</a>
     <a href="/contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> {{setting('glb.contact')}}</a>

@@ -177,10 +177,21 @@ class SettingsTableHomeSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => '查看更多 按钮',
-                'value' =>'查看详情',
+                'value' =>'查看更多',
                 'details' => '查看更多 按钮上的文字',
                 'type' => 'text',
                 'order' => 15,
+                'group' => 'GLB',
+            ])->save();
+        }
+        $setting = $this->findSetting('glb.button_detail');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '查看详细 按钮',
+                'value' =>'查看详细',
+                'details' => '查看详细 按钮上的文字',
+                'type' => 'text',
+                'order' => 16,
                 'group' => 'GLB',
             ])->save();
         }
