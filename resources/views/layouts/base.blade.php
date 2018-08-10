@@ -6,6 +6,8 @@
     @section('style')
         @include('layouts.style')
     @show
+    @yield('custom_script')
+
 </header>
 <body>
 
@@ -31,7 +33,7 @@
 @yield('about')
 @yield('contact')
 
-
+@yield('email_result')
 
 {{--
 

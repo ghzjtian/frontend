@@ -11,18 +11,10 @@
 |
 */
 
+//前端
 Route::get('/', function () {
     return view('home');
 });
-//Route::get('products', function () {
-//    return view('products');
-//});
-//Route::get('gallery', function () {
-//    return view('gallery');
-//});
-//Route::get('news', function () {
-//    return view('news');
-//});
 Route::get('about', function () {
     return view('about');
 });
@@ -33,6 +25,10 @@ Route::get('contact', function () {
 Route::resource('products','ProductController');
 Route::resource('galleries','PictureController');
 Route::resource('events','EventController');
+
+//邮件发送
+//Route::get('/send/email', 'MailController@mail');
+Route::post('/email/send', 'MailController@sendMail');
 
 //Voyager 后台管理 代码
 Route::group(['prefix' => 'admin'], function () {

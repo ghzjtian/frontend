@@ -8,7 +8,8 @@
             <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> {{setting('contact.phone')}}</p>
             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> {{setting('contact.email')}}</p>
             <br>
-            <form action="#" target="_blank">
+            <form action="/email/send" target="_blank" method="POST">
+                @csrf
                 <p><input class="w3-input w3-border" type="text" placeholder={{setting('contact.input_name')}} required name="Name"></p>
                 <p><input class="w3-input w3-border" type="text" placeholder={{setting('contact.input_email')}} required name="Email"></p>
                 <p><input class="w3-input w3-border" type="text" placeholder={{setting('contact.input_subject')}} required name="Subject"></p>
