@@ -183,3 +183,7 @@ class MySettingsTableSeeder extends Seeder
 * 10.在导入 SettingsHomeTableSeeder 的数据后，要手动在后台导入图片，否则会 CRASH ，[因为 Cache 的问题导致.](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
 
 
+
+
+|姓名|电子邮件|主题|信息内容|
+|---|---|---|---|

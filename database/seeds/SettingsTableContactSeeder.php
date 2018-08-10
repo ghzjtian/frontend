@@ -50,7 +50,7 @@ class SettingsTableContactSeeder extends Seeder
         $setting = $this->findSetting('contact.email');
         if (!$setting->exists) {
             $setting->fill([
-                'display_name' => '电子邮件',
+                'display_name' => '电子邮件(客户留言的信息也会发送到这个 email)',
                 'value' => 'jingtian.zeng@globetools.com',
                 'details' => '联系 email',
                 'type' => 'text',

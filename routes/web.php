@@ -29,6 +29,9 @@ Route::resource('events','EventController');
 //邮件发送
 //Route::get('/send/email', 'MailController@mail');
 Route::post('/email/send', 'MailController@sendMail');
+//Route::get('email/template',function(){
+//    return new \App\Mail\SentResult(setting('glb.title'));
+//});
 
 //Voyager 后台管理 代码
 Route::group(['prefix' => 'admin'], function () {

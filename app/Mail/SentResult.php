@@ -6,13 +6,13 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Request;
 
-class SendMailable extends Mailable
+class SentResult extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $name;
-
     /**
      * Create a new message instance.
      *
@@ -20,7 +20,7 @@ class SendMailable extends Mailable
      */
     public function __construct($name)
     {
-        $this->name = $name;
+        $this->name=$name;
     }
 
     /**
@@ -28,8 +28,9 @@ class SendMailable extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build(Request $request)
     {
-        return $this->markdown('email.email_template');
+
+        return $this->markdown('email.email_template', ['receive_name' => $request->Name,'email' => $request->Email,'subject' => $request->Subject,'message' => $request->Message]);
     }
 }
