@@ -18,7 +18,8 @@ class UrlUtils
      * @param String $url
      * @return String
      */
-    public static function getImageURL(String $url){
+    public static function getImageURL( $url){
+        if($url==null) return null;
         if(filter_var($url,FILTER_VALIDATE_URL)){
             return $url;
         }
