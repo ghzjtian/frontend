@@ -20,13 +20,13 @@
                             <div class="w3-col m6">
                                 <img class="w3-image w3-round-large"
                                      src={{\App\Utils\UrlUtils::getImageURL($product->image)}}
-                                             alt="Buildings" width="400" height="394">
+                                             alt="Buildings" width="200" height="200">
                             </div>
                         @else
                             <div class="w3-col m6">
                                 <img class="w3-image w3-round-large"
                                      src={{\App\Utils\UrlUtils::getImageURL($product->image)}}
-                                             alt="Buildings" width="400" height="394">
+                                             alt="Buildings" width="200" height="200">
                             </div>
                             <div class="w3-col m6">
                                 <h3>{{ $product->title }}</h3>
