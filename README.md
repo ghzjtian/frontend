@@ -166,8 +166,9 @@ class MySettingsTableSeeder extends Seeder
         
 * 14.Contact 页的 email 发送功能,地图定位功能(还没完成).   
         
-        
-        
+* 15.服务器部署后发现有问题，加载到     /vendor/autoload.php 就会 CRASH。
+    * 1.明天将卸载 PHP7.2 ,然后重装一个 php7.2-fpm 版本.   
+    * 2.发现是 laravel 一定要有 `php7.2-fpm` 的支持才行!!![解决方法:How to Install Laravel on Debian 9](https://www.rosehosting.com/blog/how-to-install-laravel-on-debian-9/)
 ***
 
 ## 4.项目 clone 后的搭建步骤
@@ -179,11 +180,9 @@ class MySettingsTableSeeder extends Seeder
 * 6.生成数据库的迁移: `php artisan migrate`
 * 7.生成 voyager 的测试数据,先把 laravel 和 voyager 的语言和区域都调成 zh ,这样生成的数据就会是本地化: `php artisan voyager:install --with-dummy`
 * 8.配置好 voyager 的 link: [http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#voyager_learn)
-* 9.如果是在开发环境中配置好了各种的参数，记得把 数据库和 storage/app/public 中的内容导入到生产环境中.
-* 10.在导入 SettingsHomeTableSeeder 的数据后，要手动在后台导入图片，否则会 CRASH ，[因为 Cache 的问题导致.](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
+* 9.如果是在开发环境中配置好了各种的参数，记得把 数据库和 storage/app/public 中的内容导入到生产环境中. (记得 nginx 要有 phpXX-fpm 的支持才行)
+* 10.在导入 SettingsTableCustomSeeder 的数据后，要手动在后台导入图片，否则会 CRASH ，[因为 Cache 的问题导致.](http://blog.tian.tianlovezhen.site/2018/06/03/Laravel%E5%AD%A6%E4%B9%A0/#cache_clear)
+    * 1.运行 `composer dump-autoload`
+    * 2.加载 Settings 的数据 `php artisan db:seed --class=SettingsTableCustomSeeder`
 
 
-
-
-|姓名|电子邮件|主题|信息内容|
-|---|---|---|---|
