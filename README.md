@@ -169,6 +169,11 @@ class MySettingsTableSeeder extends Seeder
 * 15.服务器部署后发现有问题，加载到     /vendor/autoload.php 就会 CRASH。
     * 1.明天将卸载 PHP7.2 ,然后重装一个 php7.2-fpm 版本.   
     * 2.发现是 laravel 一定要有 `php7.2-fpm` 的支持才行!!![解决方法:How to Install Laravel on Debian 9](https://www.rosehosting.com/blog/how-to-install-laravel-on-debian-9/)
+    
+    
+* 16.服务器的语言的切换.
+    * 1.在 `config/app.php` 和 `config/voyager.php` 上，把 `location` 相关的都改为 `zh_CN`.
+
 ***
 
 ## 4.项目 clone 后的搭建步骤
