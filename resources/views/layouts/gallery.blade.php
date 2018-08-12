@@ -6,14 +6,14 @@
         <div class="w3-row-padding" style="margin-top:64px">
 
             <?php
-            //            如果是在主页，就显示全部的内容
+            //            如果是在主页，就显示全部的内容,否则就分页显示
             if ($isHomePage) {
-                $pictures = \App\Picture::all();
+                $pictures = \App\Picture::orderBy('updated_at','desc')->get();
             } else {
                 $paginateNum = intval(setting('glb.paginate'));
                 $paginateNum = $paginateNum > 3 ? $paginateNum : 3;
                 $paginateNum = $paginateNum < 100 ? $paginateNum : 100;
-                $pictures = \App\Picture::paginate($paginateNum);
+                $pictures = \App\Picture::orderBy('updated_at','desc')->paginate($paginateNum);
             }
             ?>
 

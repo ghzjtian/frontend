@@ -8,13 +8,13 @@
         <?php
         //            如果是在主页，就显示全部的内容
         if ($isHomePage) {
-            $products = \App\Product::where('status', 'PUBLISHED')->get();
+            $products = \App\Product::where('status', 'PUBLISHED')->orderBy('updated_at','desc')->get();
         } else {
             $paginateNum = intval(setting('glb.paginate'));
             $paginateNum = $paginateNum > 3 ? $paginateNum : 3;
             $paginateNum = $paginateNum < 100 ? $paginateNum : 100;
 
-            $products = \App\Product::where('status', 'PUBLISHED')->paginate($paginateNum);
+            $products = \App\Product::where('status', 'PUBLISHED')->orderBy('updated_at','desc')->paginate($paginateNum);
         }
         ?>
 
