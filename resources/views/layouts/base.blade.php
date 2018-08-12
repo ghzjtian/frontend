@@ -6,8 +6,9 @@
     @section('style')
         @include('layouts.style')
     @show
-    @yield('custom_script')
+    @yield('script')
 
+    @show
 </header>
 <body>
 

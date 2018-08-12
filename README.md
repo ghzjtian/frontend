@@ -174,6 +174,8 @@ class MySettingsTableSeeder extends Seeder
 * 16.服务器的语言的切换.
     * 1.在 `config/app.php` 和 `config/voyager.php` 上，把 `location` 相关的都改为 `zh_CN`.
 
+* 17.404页面的完善，数据的分页显示.
+
 ***
 
 ## 4.项目 clone 后的搭建步骤
