@@ -195,6 +195,17 @@ class SettingsTableHomeSeeder extends Seeder
                 'group' => 'GLB',
             ])->save();
         }
+        $setting = $this->findSetting('glb.paginate');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => '每页显示的个数(如 产品列表 和 新闻列表 页)(范围 3-100 )',
+                'value' =>'10',
+                'details' => '每页显示的个数(如 product 和 news 页)',
+                'type' => 'text',
+                'order' => 17,
+                'group' => 'GLB',
+            ])->save();
+        }
 
 
 

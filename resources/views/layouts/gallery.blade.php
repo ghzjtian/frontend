@@ -4,7 +4,20 @@
         <h3 class="w3-center">{{ setting('gallery.gallery_title') }}</h3>
 
         <div class="w3-row-padding" style="margin-top:64px">
-            @foreach(App\Picture::all() as $picture)
+
+            <?php
+            //            如果是在主页，就显示全部的内容
+            if ($isHomePage) {
+                $pictures = \App\Picture::all();
+            } else {
+                $paginateNum = intval(setting('glb.paginate'));
+                $paginateNum = $paginateNum > 3 ? $paginateNum : 3;
+                $paginateNum = $paginateNum < 100 ? $paginateNum : 100;
+                $pictures = \App\Picture::paginate($paginateNum);
+            }
+            ?>
+
+            @foreach($pictures as $picture)
                 @if(!$isHomePage||$picture->show_on_home)
 
                     <div class="w3-col l3 m6 w3-card">
@@ -17,12 +30,16 @@
                 @endif
             @endforeach
         </div>
+
+
         @if($isHomePage)
             <h3 class="w3-center">
                 <p><a href={{(env('APP_URL')."/galleries")}} class="w3-button w3-khaki"><i
                             class="fa fa-ellipsis-h"> </i> {{setting('glb.button_more')}}</a></p>
 
             </h3>
+        @else
+            {{ $pictures->links() }}
         @endif
     </div>
 
