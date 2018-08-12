@@ -20,8 +20,10 @@
 
         @foreach( $events as $event)
             @if(!$isHomePage||$event->show_on_home)
-                <div class="w3-card-4 w3-margin" onclick="javascript:location.href='{{env('APP_URL')."/events/".$event->id}}'">
-                    <img src={{\App\Utils\UrlUtils::getImageURL($event->image)}} alt="Nature" style="width:100%" height="300">
+                <div class="w3-card-4 w3-margin"
+                     onclick="javascript:location.href='{{env('APP_URL')."/events/".$event->id}}'">
+                    <img src={{\App\Utils\UrlUtils::getImageURL($event->image)}} alt="Nature" style="width:100%"
+                         height="300">
                     <div class="w3-container">
                         <h3><b>{{$event->title}}</b></h3>
                         <h5>
