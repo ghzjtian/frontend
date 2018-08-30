@@ -1,18 +1,19 @@
-<!-- Team Section -->
-{{--产品详细页面--}}
+{{--新闻 详细页面--}}
 <div style="margin-top: 100px">
 
-    <img src={{\App\Utils\UrlUtils::getImageURL($event->image)}} alt="Nature" style="width:100%">
-    <div class="w3-container">
-        <h1><b>{{$event->title}}</b></h1>
-        <h5>
-            <span class="w3-opacity">{{$event->created_at->format('Y-m-d')}}</span></h5>
-    </div>
-    <div class="w3-container">
-        <h5><p>{!! $event->excerpt !!} </p></h5>
-    </div>
-    <div class="w3-container">
-        <p>{!! $event->body !!} </p>
-    </div>
+    <div style="margin-top: 100px ; min-height: 50%">
+        <div class="w3-display-container w3-animate-opacity">
+            <img src={{\App\Utils\UrlUtils::getImageURL($event->image)}} alt="Boat"
+                 style="width:100%;min-height:200px;max-height:400px;">
+        </div>
 
+        <div class="w3-container" style="margin: 50px 100px 20px 100px">
+            <h1 style="text-align: center"><b>{{ $event->title }}</b></h1>
+            <h6 style="text-align: end">{{$event->created_at->format('Y-m-d')}}</h6>
+            <h6 style="text-align: center">{!! $event->excerpt !!}</h6>
+            <hr/>
+            <br/>
+            <p>{!! $event->body !!}</p>
+        </div>
+    </div>
 </div>
