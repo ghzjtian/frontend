@@ -1,6 +1,6 @@
 <!-- Work Section -->
 @if(!$isHomePage||(strcasecmp(setting('gallery.gallery_home_show'),'yes')==0))
-    <div class="w3-container" style="padding:128px 16px" id="gallery">
+    <div class="w3-container" style="padding:10px 16px" id="gallery">
         <h3 class="w3-center">{{ setting('gallery.gallery_title') }}</h3>
 
         <div class="w3-row-padding" style="margin-top:64px">
@@ -8,29 +8,36 @@
             <?php
             //            如果是在主页，就显示全部的内容,否则就分页显示
             if ($isHomePage) {
-                $pictures = \App\Picture::orderBy('updated_at','desc')->get();
+                $pictures = \App\Picture::orderBy('updated_at', 'desc')->get();
             } else {
                 $paginateNum = intval(setting('glb.paginate'));
                 $paginateNum = $paginateNum > 3 ? $paginateNum : 3;
                 $paginateNum = $paginateNum < 100 ? $paginateNum : 100;
-                $pictures = \App\Picture::orderBy('updated_at','desc')->paginate($paginateNum);
+                $pictures = \App\Picture::orderBy('updated_at', 'desc')->paginate($paginateNum);
             }
+            $index = 0;
             ?>
-
-            @foreach($pictures as $picture)
+            @foreach($pictures as $key => $picture)
                 @if(!$isHomePage||$picture->show_on_home)
+                    <?php
 
-                    <div class="w3-col l3 m6 w3-card">
-                        <img src={{\App\Utils\UrlUtils::getImageURL($picture->image)}} style="width:100%"
-                             onclick="onClick(this)"
-                             class="w3-hover-opacity" alt={{$picture->description}}>
+                    if ($index % 3 == 0) {
+//                        echo $index;
+                    }
+                    $index++;
+                    ?>
+
+
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img src={{\App\Utils\UrlUtils::getImageURL($picture->image)}} alt={{$picture->description}} style="width:100%"
+                             class="w3-hover-opacity" onclick="onClick(this)">
+
                     </div>
-
 
                 @endif
             @endforeach
-        </div>
 
+        </div>
 
         @if($isHomePage)
             <h3 class="w3-center">
