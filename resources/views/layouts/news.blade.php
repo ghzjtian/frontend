@@ -1,20 +1,20 @@
 <!-- Team Section -->
 
 @if(!$isHomePage||(strcasecmp(setting('news.news_home_show'),'yes')==0))
-    <div class="w3-container" style="padding:128px 16px" id="news">
+    <div class="w3-container" style="padding:128px 16px ; margin:64px 150px 50px 150px ; min-height: 50%" id="news">
         <h3 class="w3-center">{{setting('news.news_title')}}</h3>
 
 
         <?php
         //            如果是在主页，就显示全部的内容
         if ($isHomePage) {
-            $events = \App\Event::where('status', 'PUBLISHED')->orderBy('updated_at','desc')->get();
+            $events = \App\Event::where('status', 'PUBLISHED')->orderBy('updated_at', 'desc')->get();
         } else {
             $paginateNum = intval(setting('glb.paginate'));
             $paginateNum = $paginateNum > 3 ? $paginateNum : 3;
             $paginateNum = $paginateNum < 100 ? $paginateNum : 100;
 
-            $events = \App\Event::where('status', 'PUBLISHED')->orderBy('updated_at','desc')->paginate($paginateNum);
+            $events = \App\Event::where('status', 'PUBLISHED')->orderBy('updated_at', 'desc')->paginate($paginateNum);
         }
         ?>
 

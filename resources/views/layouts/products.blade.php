@@ -2,7 +2,7 @@
 {{-- style="margin-top: 100px" ,让列表跟顶部之间有间隔  --}}
 {{--在主页，是否显示产品--}}
 @if(!$isHomePage||(strcasecmp(setting('product.product_home_show'),'yes')==0))
-    <div style="margin-top: 100px">
+    <div style="margin-top: 100px ;  min-height: 50%">
         <h3 class="w3-center">{{setting('product.product_title')}}</h3>
 
         <?php

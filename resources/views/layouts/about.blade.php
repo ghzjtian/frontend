@@ -1,5 +1,5 @@
 <!-- About Section -->
-<div class="w3-container w3-light-grey w3-padding-64" id="about">
+<div class="w3-container w3-light-grey w3-padding-64" id="about" style="min-height: 63%">
     <div class="w3-row-padding">
         <div class="w3-col m6">
             <h3>{{setting('about.title')}}</h3>
