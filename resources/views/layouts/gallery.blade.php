@@ -1,9 +1,8 @@
 <!-- Work Section -->
 @if(!$isHomePage||(strcasecmp(setting('gallery.gallery_home_show'),'yes')==0))
-    <div class="w3-container" style="padding:10px 16px" id="gallery">
+    <div class="w3-container" style="padding:10px 16px ; margin:64px 100px 50px 100px" id="gallery">
         <h3 class="w3-center">{{ setting('gallery.gallery_title') }}</h3>
 
-        <div class="w3-row-padding" style="margin-top:64px">
 
             <?php
             //            如果是在主页，就显示全部的内容,否则就分页显示
@@ -23,6 +22,7 @@
 
                     if ($index % 3 == 0) {
 //                        echo $index;
+                        echo '<div class="w3-row-padding"/>';
                     }
                     $index++;
                     ?>
@@ -33,11 +33,14 @@
                              class="w3-hover-opacity" onclick="onClick(this)">
 
                     </div>
-
+                    <?php
+                    if ($index % 3 == 0) {
+                        echo '</div>';
+                    }
+                    ?>
                 @endif
             @endforeach
 
-        </div>
 
         @if($isHomePage)
             <h3 class="w3-center">

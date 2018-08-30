@@ -27,23 +27,23 @@
                              onclick="javascript:location.href='{{env('APP_URL')."/products/".$product->id}}'">
                             {{--图片是否靠右--}}
                             @if($product->image_align_right)
-                                <div class="w3-col m6">
+                                <div class="w3-col m9">
                                     <h3>{{ $product->title }}</h3>
                                     <p>{!! $product->excerpt  !!}</p>
 
                                 </div>
-                                <div class="w3-col m6">
+                                <div class="w3-col m3">
                                     <img class="w3-image w3-round-large"
                                          src={{\App\Utils\UrlUtils::getImageURL($product->image)}}
                                                  alt="Buildings" width="200" height="200">
                                 </div>
                             @else
-                                <div class="w3-col m6">
+                                <div class="w3-col m3">
                                     <img class="w3-image w3-round-large"
                                          src={{\App\Utils\UrlUtils::getImageURL($product->image)}}
                                                  alt="Buildings" width="200" height="200">
                                 </div>
-                                <div class="w3-col m6">
+                                <div class="w3-col m9">
                                     <h3>{{ $product->title }}</h3>
                                     <p>{!! $product->excerpt  !!}</p>
 
